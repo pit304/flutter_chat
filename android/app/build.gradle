@@ -53,6 +53,22 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    flavorDimensions "flavor-type"
+
+    productFlavors {
+        dev {
+            dimension "flavor-type"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            manifestPlaceholders = [appName: "Flutter Chat Dev"]
+        }
+
+        prod {
+            dimension "flavor-type"
+            manifestPlaceholders = [appName: "Flutter Chat"]
+        }
+    }
 }
 
 flutter {
