@@ -36,10 +36,12 @@
       https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script>
-  <script src="firebase-init.js" type="application/javascript"></script>
+  
+  <script src="firebase-config.js" type="application/javascript"></script>
+  <!-- <script src="firebase-config-dev.js" type="application/javascript"></script> -->
 
   <script>
-    // Initialize Firebase
+    // Initialize Firebase, configuration retrieved from firebase-init.js
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
   </script>
