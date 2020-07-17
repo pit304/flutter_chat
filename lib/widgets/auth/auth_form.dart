@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat/widgets/auth/user_image_picker.dart';
 
 class AuthForm extends StatefulWidget {
   final void Function(
@@ -52,6 +53,7 @@ class _AuthFormState extends State<AuthForm> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
+            UserImagePicker(),
             TextFormField(
               autofillHints: _isLogin
                   ? [AutofillHints.username]
