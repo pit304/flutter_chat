@@ -27,15 +27,14 @@ class ChatScreen extends StatelessWidget {
                       .document(userId)
                       .get(),
                   builder: (ctx, userSnapshot) {
-                    if (userSnapshot.connectionState ==
-                        ConnectionState.waiting) {
-                      return Center(
-                        child: CircularProgressIndicator(),
-                      );
+                    if (!userSnapshot.hasData ||
+                        userSnapshot.data.data == null ||
+                        userSnapshot.connectionState ==
+                            ConnectionState.waiting) {
+                      return Text('Loading...');
                     }
                     return Text(
                       userSnapshot.data['username'],
-                      textHeightBehavior: TextHeightBehavior(),
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),

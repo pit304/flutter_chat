@@ -45,5 +45,5 @@ app.*.map.json
 
 # Firebase configuration for Web and Android
 web/firebase-config*.js
-android/app/google-services.json
+android/app/google-services*.json
 android/app/src/*/google-services.json
